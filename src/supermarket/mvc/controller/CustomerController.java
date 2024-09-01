@@ -21,7 +21,7 @@ public class CustomerController {
     public String saveCustomer(CustomerModel customer) throws SQLException{
         Connection connection = DBConnection.getInstance().getConnection();
         
-        String query = "INSERT INTO customer VALUES(?,?,?,?,?,?,?,?,?)";
+        String query = "INSERT INTO Customer VALUES(?,?,?,?,?,?,?,?,?)";
         
         PreparedStatement PreparedStatement = connection.prepareStatement(query);
         PreparedStatement.setString(1,customer.getCustId() );
@@ -45,7 +45,7 @@ public class CustomerController {
     public ArrayList<CustomerModel>getAllCustomers() throws SQLException{
         Connection connection = DBConnection.getInstance().getConnection();
         
-        String query = "SELECT * FROM customer";
+        String query = "SELECT * FROM Customer";
         
         PreparedStatement statement = connection.prepareStatement(query);
         
@@ -71,7 +71,7 @@ public class CustomerController {
 
     public CustomerModel searchCustomer(String custId) throws SQLException {
         Connection connection = DBConnection.getInstance().getConnection();
-        String query = "SELECT * FROM customer WHERE CustID = ?";
+        String query = "SELECT * FROM Customer WHERE CustID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, custId);
         
@@ -95,7 +95,7 @@ public class CustomerController {
     public String updateCustomer(CustomerModel customerModel) throws SQLException {
          Connection connection = DBConnection.getInstance().getConnection();
         
-        String query = "UPDATE customer SET CustTitle=?, CustName =?, DOB=?, salary=?, CustAddress=?,City=?, Province=?,PostalCode=? WHERE CustID=?";
+        String query = "UPDATE Customer SET CustTitle=?, CustName =?, DOB=?, salary=?, CustAddress=?,City=?, Province=?,PostalCode=? WHERE CustID=?";
         
         PreparedStatement statement = connection.prepareStatement(query);
         
@@ -118,7 +118,7 @@ public class CustomerController {
 
     public String deleteCustomer(String custId) throws SQLException {
          Connection connection = DBConnection.getInstance().getConnection();
-        String query = "DELETE FROM customer WHERE CustID = ?";
+        String query = "DELETE FROM Customer WHERE CustID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, custId);
         

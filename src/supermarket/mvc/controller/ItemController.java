@@ -21,7 +21,7 @@ public class ItemController {
     public ArrayList<ItemModel> getAllItems() throws SQLException{
         Connection connection = DBConnection.getInstance().getConnection();
         
-        String query = "SELECT * FROM item";
+        String query = "SELECT * FROM Item";
         
         PreparedStatement statement = connection.prepareStatement(query);
         
@@ -44,7 +44,7 @@ public class ItemController {
 
     public String saveItem(ItemModel item) throws SQLException {
         Connection connection = DBConnection.getInstance().getConnection();
-        String query = "INSERT INTO item VALUES(?,?,?,?,?)";
+        String query = "INSERT INTO Item VALUES(?,?,?,?,?)";
 
         PreparedStatement preparedStatement = connection.prepareStatement(query);
         preparedStatement.setString(1, item.getItemCode());
@@ -63,7 +63,7 @@ public class ItemController {
     public ItemModel searchItem(String itemCode) throws SQLException{
         Connection connection = DBConnection.getInstance().getConnection();
 
-        String query = "Select * FROM item WHERE ItemCode = ?";
+        String query = "Select * FROM Item WHERE ItemCode = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, itemCode);
 
@@ -83,7 +83,7 @@ public class ItemController {
 
     public String updateItem(ItemModel item)throws SQLException {
         Connection connection = DBConnection.getInstance().getConnection();
-        String query = "UPDATE item SET Description=?, PackSize=?, UnitPrice=?, QtyOnHand=? WHERE ItemCode=?";
+        String query = "UPDATE Item SET Description=?, PackSize=?, UnitPrice=?, QtyOnHand=? WHERE ItemCode=?";
 
         PreparedStatement preparedStatement = connection.prepareStatement(query);
         preparedStatement.setString(5, item.getItemCode());
@@ -101,7 +101,7 @@ public class ItemController {
 
     public String deleteItem(String itemCode) throws SQLException {
         Connection connection = DBConnection.getInstance().getConnection();
-        String query = "DELETE FROM item WHERE ItemCode=?";
+        String query = "DELETE FROM Item WHERE ItemCode=?";
 
         PreparedStatement preparedStatement = connection.prepareStatement(query);
         preparedStatement.setString(1, itemCode);

@@ -21,7 +21,7 @@ public class OrderController {
         Connection connection = DBConnection.getInstance().getConnection();
         try {
             connection.setAutoCommit(false);
-            String orderQuery = "INSERT INTO orders VALUES(?,?,?)";
+            String orderQuery = "INSERT INTO Orders VALUES(?,?,?)";
 
             PreparedStatement statementForOrder = connection.prepareStatement(orderQuery);
             statementForOrder.setString(1, orderModel.getOrderId());
@@ -31,7 +31,7 @@ public class OrderController {
             if (statementForOrder.executeUpdate() > 0) {
 
                 boolean isOrderDetailSaved = true;
-                String orderDetailQuery = "INSERT INTO orderdetail VALUES(?,?,?,?)";
+                String orderDetailQuery = "INSERT INTO OrderDetail VALUES(?,?,?,?)";
 
                 for (OrderDetailModel orderDetailModel : orderDetailModels) {
                     PreparedStatement statementForOrderDetail = connection.prepareStatement(orderDetailQuery);
@@ -48,7 +48,7 @@ public class OrderController {
                 
                 if(isOrderDetailSaved){
                     boolean isItemUpdated = true;
-                    String itemQuery = "UPDATE item SET QtyOnHand = QtyOnHand - ? WHERE ItemCode = ?";
+                    String itemQuery = "UPDATE Item SET QtyOnHand = QtyOnHand - ? WHERE ItemCode = ?";
                     for (OrderDetailModel orderDetailModel : orderDetailModels) {
                         PreparedStatement statmentForItem = connection.prepareStatement(itemQuery);
                         statmentForItem.setInt(1, orderDetailModel.getQty());

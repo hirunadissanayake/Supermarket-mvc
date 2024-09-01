@@ -1,8 +1,10 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package supermarket.mvc.view;
+
+import supermarket.mvc.controller.CustomerController;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -12,19 +14,18 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import supermarket.mvc.controller.CustomerController;
 import supermarket.mvc.model.CustomerModel;
-
 /**
  *
- * @author dell
+ * @author hiruna
  */
-public class CustomerView extends javax.swing.JFrame {
+public class CustomerPanel extends javax.swing.JPanel {
     
-   private CustomerController customerController;
+    private CustomerController customerController;
 
     /**
-     * Creates new form CustomerView
+     * Creates new form CustomerPanel
      */
-    public CustomerView() {
+    public CustomerPanel() {
         customerController = new CustomerController();
         initComponents();
         loadAllCustomers();
@@ -40,160 +41,30 @@ public class CustomerView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        headerlabel = new javax.swing.JLabel();
-        custIdLabel = new javax.swing.JLabel();
-        custIdText = new javax.swing.JTextField();
-        custTittleLabel = new javax.swing.JLabel();
-        custTittleText = new javax.swing.JTextField();
-        custNameLabel = new javax.swing.JLabel();
-        custSalaryText = new javax.swing.JTextField();
-        CustDOBLabel = new javax.swing.JLabel();
-        custCityText = new javax.swing.JTextField();
-        custSalaryLabel = new javax.swing.JLabel();
-        custAdressLabel = new javax.swing.JLabel();
-        custZipText = new javax.swing.JTextField();
-        custCityLabel = new javax.swing.JLabel();
-        custAddressText = new javax.swing.JTextField();
-        custProvinceLabel = new javax.swing.JLabel();
-        custProvinceText = new javax.swing.JTextField();
-        custZipLabel = new javax.swing.JLabel();
-        custNameText = new javax.swing.JTextField();
-        custDOBText = new javax.swing.JTextField();
-        addButton = new javax.swing.JButton();
-        deleteButton = new javax.swing.JButton();
         updateButton = new javax.swing.JButton();
+        custZipText = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         customerTable = new javax.swing.JTable();
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(102, 102, 102));
-        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setFont(new java.awt.Font("Bodoni MT Black", 0, 36)); // NOI18N
-        setForeground(new java.awt.Color(153, 153, 153));
-
-        headerlabel.setBackground(new java.awt.Color(51, 51, 255));
-        headerlabel.setFont(new java.awt.Font("Cooper Black", 0, 36)); // NOI18N
-        headerlabel.setForeground(new java.awt.Color(51, 51, 51));
-        headerlabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        headerlabel.setText("Manage Customer");
-
-        custIdLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        custIdLabel.setText("Customer Id");
-
-        custIdText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                custIdTextActionPerformed(evt);
-            }
-        });
-
-        custTittleLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        custTittleLabel.setText("Tittle");
-
-        custTittleText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                custTittleTextActionPerformed(evt);
-            }
-        });
-
-        custNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        custNameLabel.setText("Name");
-
-        custSalaryText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                custSalaryTextActionPerformed(evt);
-            }
-        });
-
-        CustDOBLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        CustDOBLabel.setText("DOB");
-
-        custCityText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                custCityTextActionPerformed(evt);
-            }
-        });
-
-        custSalaryLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        custSalaryLabel.setText("Salary");
-
-        custAdressLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        custAdressLabel.setText("Address");
-
-        custZipText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                custZipTextActionPerformed(evt);
-            }
-        });
-
-        custCityLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        custCityLabel.setText("City");
-
-        custAddressText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                custAddressTextActionPerformed(evt);
-            }
-        });
-
-        custProvinceLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        custProvinceLabel.setText("Province");
-
-        custProvinceText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                custProvinceTextActionPerformed(evt);
-            }
-        });
-
-        custZipLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        custZipLabel.setText("Zip");
-
-        custNameText.setName(""); // NOI18N
-        custNameText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                custNameTextActionPerformed(evt);
-            }
-        });
-
-        custDOBText.setName("txtName"); // NOI18N
-        custDOBText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                custDOBTextActionPerformed(evt);
-            }
-        });
-
-        addButton.setBackground(new java.awt.Color(102, 102, 102));
-        addButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        addButton.setForeground(new java.awt.Color(255, 255, 255));
-        addButton.setText("Save Customer");
-        addButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonActionPerformed(evt);
-            }
-        });
-
-        deleteButton.setBackground(new java.awt.Color(102, 102, 102));
-        deleteButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        deleteButton.setForeground(new java.awt.Color(255, 255, 255));
-        deleteButton.setText("Delete Customer");
-        deleteButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteButtonActionPerformed(evt);
-            }
-        });
+        custIdLabel = new javax.swing.JLabel();
+        custCityLabel = new javax.swing.JLabel();
+        custIdText = new javax.swing.JTextField();
+        custAddressText = new javax.swing.JTextField();
+        custTittleLabel = new javax.swing.JLabel();
+        custProvinceLabel = new javax.swing.JLabel();
+        custTittleText = new javax.swing.JTextField();
+        custProvinceText = new javax.swing.JTextField();
+        custNameLabel = new javax.swing.JLabel();
+        custZipLabel = new javax.swing.JLabel();
+        custSalaryText = new javax.swing.JTextField();
+        custNameText = new javax.swing.JTextField();
+        CustDOBLabel = new javax.swing.JLabel();
+        custDOBText = new javax.swing.JTextField();
+        custCityText = new javax.swing.JTextField();
+        addButton = new javax.swing.JButton();
+        custSalaryLabel = new javax.swing.JLabel();
+        deleteButton = new javax.swing.JButton();
+        custAdressLabel = new javax.swing.JLabel();
+        headerlabel = new javax.swing.JLabel();
 
         updateButton.setBackground(new java.awt.Color(102, 102, 102));
         updateButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -205,7 +76,12 @@ public class CustomerView extends javax.swing.JFrame {
             }
         });
 
-        customerTable.setForeground(new java.awt.Color(153, 153, 153));
+        custZipText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                custZipTextActionPerformed(evt);
+            }
+        });
+
         customerTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -224,8 +100,111 @@ public class CustomerView extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(customerTable);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        custIdLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        custIdLabel.setText("Customer Id");
+
+        custCityLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        custCityLabel.setText("City");
+
+        custIdText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                custIdTextActionPerformed(evt);
+            }
+        });
+
+        custAddressText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                custAddressTextActionPerformed(evt);
+            }
+        });
+
+        custTittleLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        custTittleLabel.setText("Tittle");
+
+        custProvinceLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        custProvinceLabel.setText("Province");
+
+        custTittleText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                custTittleTextActionPerformed(evt);
+            }
+        });
+
+        custProvinceText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                custProvinceTextActionPerformed(evt);
+            }
+        });
+
+        custNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        custNameLabel.setText("Name");
+
+        custZipLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        custZipLabel.setText("Zip");
+
+        custSalaryText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                custSalaryTextActionPerformed(evt);
+            }
+        });
+
+        custNameText.setName(""); // NOI18N
+        custNameText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                custNameTextActionPerformed(evt);
+            }
+        });
+
+        CustDOBLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        CustDOBLabel.setText("DOB");
+
+        custDOBText.setName("txtName"); // NOI18N
+        custDOBText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                custDOBTextActionPerformed(evt);
+            }
+        });
+
+        custCityText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                custCityTextActionPerformed(evt);
+            }
+        });
+
+        addButton.setBackground(new java.awt.Color(102, 102, 102));
+        addButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        addButton.setForeground(new java.awt.Color(255, 255, 255));
+        addButton.setText("Save Customer");
+        addButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addButtonActionPerformed(evt);
+            }
+        });
+
+        custSalaryLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        custSalaryLabel.setText("Salary");
+
+        deleteButton.setBackground(new java.awt.Color(102, 102, 102));
+        deleteButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        deleteButton.setForeground(new java.awt.Color(255, 255, 255));
+        deleteButton.setText("Delete Customer");
+        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteButtonActionPerformed(evt);
+            }
+        });
+
+        custAdressLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        custAdressLabel.setText("Address");
+
+        headerlabel.setBackground(new java.awt.Color(51, 51, 255));
+        headerlabel.setFont(new java.awt.Font("Cooper Black", 0, 36)); // NOI18N
+        headerlabel.setForeground(new java.awt.Color(51, 51, 51));
+        headerlabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        headerlabel.setText("Manage Customer");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -286,7 +265,7 @@ public class CustomerView extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(custProvinceLabel)
                                 .addGap(348, 348, 348)))))
-                .addGap(27, 27, 27))
+                .addContainerGap())
             .addComponent(headerlabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -333,39 +312,41 @@ public class CustomerView extends javax.swing.JFrame {
                         .addComponent(addButton)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void custIdTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custIdTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_custIdTextActionPerformed
-
-    private void custTittleTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custTittleTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_custTittleTextActionPerformed
-
-    private void custSalaryTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custSalaryTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_custSalaryTextActionPerformed
-
-    private void custAddressTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custAddressTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_custAddressTextActionPerformed
+    private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
+        updateCustomer();
+    }//GEN-LAST:event_updateButtonActionPerformed
 
     private void custZipTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custZipTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_custZipTextActionPerformed
 
-    private void custCityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custCityTextActionPerformed
+    private void customerTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_customerTableMouseClicked
+        searchCustomer();
+    }//GEN-LAST:event_customerTableMouseClicked
+
+    private void custIdTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custIdTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_custCityTextActionPerformed
+    }//GEN-LAST:event_custIdTextActionPerformed
+
+    private void custAddressTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custAddressTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_custAddressTextActionPerformed
+
+    private void custTittleTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custTittleTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_custTittleTextActionPerformed
 
     private void custProvinceTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custProvinceTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_custProvinceTextActionPerformed
+
+    private void custSalaryTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custSalaryTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_custSalaryTextActionPerformed
 
     private void custNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custNameTextActionPerformed
         // TODO add your handling code here:
@@ -375,56 +356,18 @@ public class CustomerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_custDOBTextActionPerformed
 
-    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
-        deleteCustomer();
-    }//GEN-LAST:event_deleteButtonActionPerformed
-
-    private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
-        updateCustomer();
-    }//GEN-LAST:event_updateButtonActionPerformed
+    private void custCityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_custCityTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_custCityTextActionPerformed
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         saveCustomer();
     }//GEN-LAST:event_addButtonActionPerformed
 
-    private void customerTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_customerTableMouseClicked
-        searchCustomer();
-    }//GEN-LAST:event_customerTableMouseClicked
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+        deleteCustomer();
+    }//GEN-LAST:event_deleteButtonActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CustomerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CustomerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CustomerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CustomerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CustomerView().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CustDOBLabel;
@@ -449,9 +392,7 @@ public class CustomerView extends javax.swing.JFrame {
     private javax.swing.JTable customerTable;
     private javax.swing.JButton deleteButton;
     private javax.swing.JLabel headerlabel;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton updateButton;
     // End of variables declaration//GEN-END:variables
 
@@ -471,7 +412,7 @@ public class CustomerView extends javax.swing.JFrame {
            clear();
            loadAllCustomers();
        } catch (SQLException ex) {
-           Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex.getMessage());
+           Logger.getLogger(CustomerPanel.class.getName()).log(Level.SEVERE, null, ex.getMessage());
        }    
     }
      public void clear() {
@@ -513,7 +454,7 @@ public class CustomerView extends javax.swing.JFrame {
                dtm.addRow(rowData);
            }
        } catch (SQLException ex) {
-           Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
+           Logger.getLogger(CustomerPanel.class.getName()).log(Level.SEVERE, null, ex);
            JOptionPane.showMessageDialog(this, ex.getMessage());
        }
      }
@@ -537,7 +478,7 @@ public class CustomerView extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Customer Not Found");
             }
         } catch (SQLException ex) {
-            Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CustomerPanel.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     
@@ -561,7 +502,7 @@ public class CustomerView extends javax.swing.JFrame {
             clear();
             loadAllCustomers();
         } catch (SQLException ex) {
-            Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CustomerPanel.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }
@@ -574,7 +515,7 @@ public class CustomerView extends javax.swing.JFrame {
             clear();
             loadAllCustomers();
         } catch (SQLException ex) {
-            Logger.getLogger(CustomerView.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CustomerPanel.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }

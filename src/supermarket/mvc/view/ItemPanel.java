@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package supermarket.mvc.view;
 
@@ -15,16 +15,16 @@ import supermarket.mvc.model.ItemModel;
 
 /**
  *
- * @author dell
+ * @author hiruna
  */
-public class ItemView extends javax.swing.JFrame {
+public class ItemPanel extends javax.swing.JPanel {
     
     private ItemController itemController;
 
     /**
-     * Creates new form ItemView
+     * Creates new form ItemPanel
      */
-    public ItemView()  {
+    public ItemPanel() {
         itemController = new ItemController();
         initComponents();
         loadAllItems();
@@ -39,10 +39,6 @@ public class ItemView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel3 = new javax.swing.JPanel();
-        basePanel2 = new javax.swing.JPanel();
-        headerPanel2 = new javax.swing.JPanel();
-        headerlabel2 = new javax.swing.JLabel();
         fromPanel2 = new javax.swing.JPanel();
         itemCodeLabel = new javax.swing.JLabel();
         itemCodeText = new javax.swing.JTextField();
@@ -60,35 +56,8 @@ public class ItemView extends javax.swing.JFrame {
         tablePanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         ItemTable = new javax.swing.JTable();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        headerlabel2.setBackground(new java.awt.Color(51, 51, 255));
-        headerlabel2.setFont(new java.awt.Font("Cooper Black", 0, 36)); // NOI18N
-        headerlabel2.setForeground(new java.awt.Color(51, 51, 51));
-        headerlabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        headerlabel2.setText("Manage Item");
-
-        javax.swing.GroupLayout headerPanel2Layout = new javax.swing.GroupLayout(headerPanel2);
-        headerPanel2.setLayout(headerPanel2Layout);
-        headerPanel2Layout.setHorizontalGroup(
-            headerPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 872, Short.MAX_VALUE)
-            .addGroup(headerPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(headerPanel2Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(headerlabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-        headerPanel2Layout.setVerticalGroup(
-            headerPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 55, Short.MAX_VALUE)
-            .addGroup(headerPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(headerPanel2Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(headerlabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
+        headerPanel2 = new javax.swing.JPanel();
+        headerlabel2 = new javax.swing.JLabel();
 
         itemCodeLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         itemCodeLabel.setText("Item Code");
@@ -194,7 +163,7 @@ public class ItemView extends javax.swing.JFrame {
                                 .addGroup(fromPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(unitPriceText, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(packSizeText, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 233, Short.MAX_VALUE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(18, 18, 18)
                         .addComponent(deleteButton)
                         .addGap(18, 18, 18)
@@ -271,69 +240,51 @@ public class ItemView extends javax.swing.JFrame {
             tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tablePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout basePanel2Layout = new javax.swing.GroupLayout(basePanel2);
-        basePanel2.setLayout(basePanel2Layout);
-        basePanel2Layout.setHorizontalGroup(
-            basePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        headerlabel2.setBackground(new java.awt.Color(51, 51, 255));
+        headerlabel2.setFont(new java.awt.Font("Cooper Black", 0, 36)); // NOI18N
+        headerlabel2.setForeground(new java.awt.Color(51, 51, 51));
+        headerlabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        headerlabel2.setText("Manage Item");
+
+        javax.swing.GroupLayout headerPanel2Layout = new javax.swing.GroupLayout(headerPanel2);
+        headerPanel2.setLayout(headerPanel2Layout);
+        headerPanel2Layout.setHorizontalGroup(
+            headerPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(headerlabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        headerPanel2Layout.setVerticalGroup(
+            headerPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(headerlabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(tablePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(fromPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(headerPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        basePanel2Layout.setVerticalGroup(
-            basePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(basePanel2Layout.createSequentialGroup()
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
                 .addComponent(headerPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(fromPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tablePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(basePanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(basePanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 872, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 469, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void ItemTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ItemTableMouseClicked
-       searchItem(); 
-    }//GEN-LAST:event_ItemTableMouseClicked
 
     private void itemCodeTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemCodeTextActionPerformed
         // TODO add your handling code here:
@@ -367,65 +318,22 @@ public class ItemView extends javax.swing.JFrame {
         updateItem();
     }//GEN-LAST:event_updateButtonActionPerformed
 
-   
+    private void ItemTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ItemTableMouseClicked
+        searchItem();
+    }//GEN-LAST:event_ItemTableMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable ItemTable;
-    private javax.swing.JButton addButton;
-    private javax.swing.JButton addButton1;
     private javax.swing.JButton addButton2;
-    private javax.swing.JPanel basePanel;
-    private javax.swing.JPanel basePanel1;
-    private javax.swing.JPanel basePanel2;
-    private javax.swing.JLabel custAddressLabel;
-    private javax.swing.JLabel custAddressLabel1;
-    private javax.swing.JTextField custAddressText;
-    private javax.swing.JTextField custAddressText1;
-    private javax.swing.JLabel custCityLabel;
-    private javax.swing.JLabel custCityLabel1;
-    private javax.swing.JTextField custCityText;
-    private javax.swing.JTextField custCityText1;
-    private javax.swing.JLabel custDobLabel;
-    private javax.swing.JLabel custDobLabel1;
-    private javax.swing.JTextField custDobText;
-    private javax.swing.JTextField custDobText1;
-    private javax.swing.JLabel custIdLabel;
-    private javax.swing.JLabel custIdLabel1;
-    private javax.swing.JTextField custIdText;
-    private javax.swing.JTextField custIdText1;
-    private javax.swing.JLabel custNameLabel;
-    private javax.swing.JLabel custNameLabel1;
-    private javax.swing.JTextField custNameText;
-    private javax.swing.JTextField custNameText1;
-    private javax.swing.JLabel custProvinceLabel;
-    private javax.swing.JLabel custProvinceLabel1;
-    private javax.swing.JTextField custProvinceText;
-    private javax.swing.JTextField custProvinceText1;
-    private javax.swing.JLabel custTitleLabel;
-    private javax.swing.JLabel custTitleLabel1;
-    private javax.swing.JTextField custTitleText;
-    private javax.swing.JTextField custTitleText1;
-    private javax.swing.JLabel custZipLabel;
-    private javax.swing.JLabel custZipLabel1;
-    private javax.swing.JTextField custZipText;
-    private javax.swing.JTextField custZipText1;
     private javax.swing.JButton deleteButton;
     private javax.swing.JLabel descriptionLabel;
     private javax.swing.JTextField descriptionText;
-    private javax.swing.JPanel fromPanel;
-    private javax.swing.JPanel fromPanel1;
     private javax.swing.JPanel fromPanel2;
-    private javax.swing.JPanel headerPanel;
-    private javax.swing.JPanel headerPanel1;
     private javax.swing.JPanel headerPanel2;
-    private javax.swing.JLabel headerlabel;
-    private javax.swing.JLabel headerlabel1;
     private javax.swing.JLabel headerlabel2;
     private javax.swing.JLabel itemCodeLabel;
     private javax.swing.JTextField itemCodeText;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel packSizeLabel;
     private javax.swing.JTextField packSizeText;
@@ -454,7 +362,7 @@ public class ItemView extends javax.swing.JFrame {
                 dtm.addRow(row);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(ItemView.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ItemPanel.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
      }
@@ -471,7 +379,7 @@ public class ItemView extends javax.swing.JFrame {
             clear();
             loadAllItems();
         } catch (SQLException ex) {
-            Logger.getLogger(ItemView.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ItemPanel.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }
@@ -500,7 +408,7 @@ public class ItemView extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Item Not Found");
             }
         } catch (SQLException ex) {
-            Logger.getLogger(ItemView.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ItemPanel.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }
@@ -517,7 +425,7 @@ public class ItemView extends javax.swing.JFrame {
             clear();
             loadAllItems();
         } catch (SQLException ex) {
-            Logger.getLogger(ItemView.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ItemPanel.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }
@@ -530,19 +438,8 @@ public class ItemView extends javax.swing.JFrame {
             clear();
             loadAllItems();
         } catch (SQLException ex) {
-            Logger.getLogger(ItemView.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ItemPanel.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, ex.getMessage());
         }
     }
 }
-
-
-
-        
-        
-                
-        
-
-        
-    
-
